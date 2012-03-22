@@ -1,4 +1,13 @@
 <div class="hero-unit">
   <h1 data-bind="message"></h1>
-  <input type="text" data-bind="message" />
+  <input data-bind="message" />
+</div>
+
+<div class="well">
+  <h1>who do we have here?</h1>
+
+  <input data-bind="villain.firstName" />
+  <input data-bind="villain.lastName" />
+
+  <h2 data-bind="villain.fullName"></h2>
 </div>
