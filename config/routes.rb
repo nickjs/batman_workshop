@@ -1,5 +1,7 @@
 BatmanWorkshop::Application.routes.draw do
-  resources :villains
+  resources :villains do
+    resources :crimes
+  end
 
   root :to => 'batman#index'
 
