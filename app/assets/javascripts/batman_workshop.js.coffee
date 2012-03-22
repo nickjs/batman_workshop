@@ -1,13 +1,11 @@
 class window.BatmanWorkshop extends Batman.App
 
+  @resources 'villains'
+
   @message: 'welcome to arkham asylum'
 
   @on 'run', ->
     console?.log "Running ...."
-
-    # we wait until run because our model classes need to be loaded and defined before we can use them
-    @villain = BatmanWorkshop.Villain.find 1, (error) ->
-      # always make sure you handle errors
 
   @on 'ready', ->
     console?.log "BatmanWorkshop ready for use."
