@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>BatmanWorkshop</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
@@ -7,10 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div data-bind="flash.success"></div>
-<div data-bind="flash.error"></div>
+  <div class="container">
+    <div data-bind="flash.success"></div>
+    <div data-bind="flash.error"></div>
 
-<%= yield %>
-
+    <%= yield %>
+  </div>
 </body>
 </html>
