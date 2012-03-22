@@ -1,5 +1,8 @@
 class window.BatmanWorkshop extends Batman.App
 
+  @message: 'welcome to arkham asylum'
+  # how do we check this from the console?
+
   @on 'run', ->
     console?.log "Running ...."
 
