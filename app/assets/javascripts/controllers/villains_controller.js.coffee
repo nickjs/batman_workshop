@@ -6,5 +6,8 @@ class BatmanWorkshop.VillainsController extends Batman.Controller
     @villain = new BatmanWorkshop.Villain
 
   create: ->
-    @villain.save()
-    @redirect controller: 'villains', action: 'index'
+    @villain.save (err) =>
+      if err
+        console.log err
+      else
+        @redirect controller: 'villains', action: 'index'
