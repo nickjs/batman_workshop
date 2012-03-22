@@ -1,6 +1,6 @@
 class BatmanWorkshop.Villain extends Batman.Model
 
-  @persist Batman.LocalStorage
+  @persist Batman.RailsStorage
   @encode 'firstName', 'lastName'
   @validate 'firstName', presence: true
   @validate 'lastName', presence: true
