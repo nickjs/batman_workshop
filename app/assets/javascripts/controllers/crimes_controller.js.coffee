@@ -5,3 +5,10 @@ class BatmanWorkshop.CrimesController extends Batman.Controller
       return @redirect controller: 'villains', action: 'index'
 
     @crime = new BatmanWorkshop.Crime
+
+  create: ->
+    @crime.save (err) =>
+      if err
+        console.log err
+      else
+        @redirect controller: 'villains', action: 'index'

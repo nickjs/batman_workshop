@@ -5,6 +5,8 @@ class BatmanWorkshop.Crime extends Batman.Model
 
   @belongsTo 'villain'
 
+  @urlNestsUnder 'villain'
+
   @accessor 'latitude', ->
     @get('location')?.split(',')[0]
   @accessor 'longitude', ->
