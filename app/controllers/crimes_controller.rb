@@ -12,17 +12,22 @@ class CrimesController < ApplicationController
   end
 
   def update
-    @crime = @villain.crimes.find_or_create_by_id params[:id]
+    @crime = @villain.crimes.find params[:id]
     @crime.update_attributes params[:crime]
 
     respond_with @crime
+  end
+
+  def create
+    @crime = @villain.crimes.create params[:crime]
+    respond_with @crime, :location => villain_crimes_url(@villain)
   end
 
   def destroy
     @crime = @villain.crimes.find params[:id]
     @crime.destroy
 
-    respond_with @crime, :location => villain_url(villain)
+    respond_with @crime, :location => villain_crimes_url(@villain)
   end
 
   protected

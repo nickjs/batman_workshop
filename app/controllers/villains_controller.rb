@@ -12,10 +12,15 @@ class VillainsController < ApplicationController
   end
 
   def update
-    @villain = Villain.find_or_create_by_id params[:id]
+    @villain = Villain.find params[:id]
     @villain.update_attributes params[:villain]
 
-    respond_with(@villain)
+    respond_with @villain
+  end
+
+  def create
+    @villain = Villain.create params[:villain]
+    respond_with @villain, :location => villains_url
   end
 
   def destroy
