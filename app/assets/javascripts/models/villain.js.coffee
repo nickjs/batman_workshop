@@ -1,5 +1,8 @@
 class BatmanWorkshop.Villain extends Batman.Model
 
+  @persist Batman.LocalStorage
+  @encode 'firstName', 'lastName'
+
   firstName: 'edward'
   lastName: 'nigma'
 
