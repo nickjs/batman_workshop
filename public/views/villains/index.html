@@ -1,5 +1,7 @@
-<div data-foreach-villain="villains">
-  <div data-bind="villain.fullName"></div>
-</div>
+<form data-foreach-villain="villains" data-event-submit="villain.save" class="form-inline">
+  <input data-bind="villain.fullName" />
+  <button type="submit" class="btn">Save</button>
+  <a data-event-click="villain.destroy" class="btn btn-danger">Delete</a>
+</form>
 
 <a data-route="Villain | routeToAction 'new'" class="btn btn-primary">New Villain</a>
