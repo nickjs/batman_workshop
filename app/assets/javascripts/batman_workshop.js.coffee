@@ -6,7 +6,9 @@ class window.BatmanWorkshop extends Batman.App
     console?.log "Running ...."
 
     # we wait until run because our model classes need to be loaded and defined before we can use them
-    @villain = new BatmanWorkshop.Villain
+    @villain = BatmanWorkshop.Villain.find 1, (error) ->
+      throw error
+      # always make sure you handle errors
 
   @on 'ready', ->
     console?.log "BatmanWorkshop ready for use."
