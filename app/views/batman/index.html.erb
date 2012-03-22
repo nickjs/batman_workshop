@@ -3,10 +3,9 @@
   <input data-bind="message" />
 </div>
 
-<div class="well">
+<div class="well form-inline">
   <h1>who do we have here?</h1>
 
   <input data-bind="villain.fullName" />
-
-  <h2 data-bind="villain.fullName"></h2>
+  <a data-event-click="villain.save" class="btn btn-primary">Save</a>
 </div>
