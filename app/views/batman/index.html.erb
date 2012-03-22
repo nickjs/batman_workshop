@@ -9,3 +9,12 @@
   <input data-bind="villain.fullName" />
   <a data-event-click="villain.save" class="btn btn-primary">Save</a>
 </div>
+
+<div class="well">
+  <ul>
+    <li data-foreach-villain="villains">
+      <span data-bind="villain.fullName"></span>
+    </li>
+  </ul>
+</div>
+
