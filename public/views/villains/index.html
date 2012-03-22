@@ -7,9 +7,8 @@
     <a data-event-click="villain.destroy | withArguments ''" class="btn btn-danger">Delete</a>
   </form>
 
-  <div data-foreach-crime="villain.crimes">
-    <span data-bind="crime.name"></span>
-  </div>
+  <h3 data-bind="'crime' | pluralize villain.crimes.length | append ' alert' | upcase"></h3>
+  <div data-foreach-crime="villain.crimes" data-partial="villains/crime"></div>
 </div>
 
 <a data-route="Villain | routeToAction 'new'" class="btn btn-primary">New Villain</a>
