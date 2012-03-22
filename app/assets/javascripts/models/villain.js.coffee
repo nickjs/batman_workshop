@@ -5,6 +5,8 @@ class BatmanWorkshop.Villain extends Batman.Model
   @validate 'firstName', presence: true
   @validate 'lastName', presence: true
 
+  @hasMany 'crimes'
+
   # does an object NEED to be a model in order to have accessors?
   @accessor 'fullName',
     get: ->
