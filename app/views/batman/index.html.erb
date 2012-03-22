@@ -3,8 +3,8 @@
     <div class="container">
       <span class="brand" data-bind="message"></span>
       <ul class="nav">
-        <li><a data-route="Crime | routeToAction 'new'">Report a Crime</a></li>
-        <li><a data-route="Villain | routeToAction 'index'">Villains</a></li>
+        <li data-addclass-active="currentURL | matches 'villains' | not"><a data-route="Crime | routeToAction 'new'">Report a Crime</a></li>
+        <li data-addclass-active="currentURL | matches 'villains'"><a data-route="Villain | routeToAction 'index'">Villains</a></li>
       </ul>
 
       <form class="navbar-form pull-right">
