@@ -1,0 +1,9 @@
+<h2>Report a Crime</h2>
+
+<form data-formfor-crime="crime" data-event-submit="crime.save" class="form-inline">
+  <select data-bind="crime.villain">
+    <option data-foreach-villain="villains" data-bind="villain.fullName" data-bind-value="villain.id"></option>
+  </select>
+  <input data-bind="crime.name" />
+  <button type="submit" class="btn btn-success">Report!</button>
+</form>
