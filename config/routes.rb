@@ -1,4 +1,6 @@
 BatmanWorkshop::Application.routes.draw do
+  resources :villains
+
   root :to => 'batman#index'
 
   # The priority is based upon order of creation:
