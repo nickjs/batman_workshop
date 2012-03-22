@@ -3,7 +3,13 @@ class BatmanWorkshop.Villain extends Batman.Model
   firstName: 'edward'
   lastName: 'nigma'
 
-  @accessor 'fullName', ->
-    # why do we use gets instead of property access?
-    # how do we make this bidirectional?
-    "#{@get 'firstName'} #{@get 'lastName'}"
+  # does an object NEED to be a model in order to have accessors?
+  @accessor 'fullName',
+    get: ->
+      "#{@get 'firstName'} #{@get 'lastName'}"
+
+    set: (key, value) ->
+      components = value.split ' '
+      @set 'firstName', components[0]
+      @set 'lastName', components[1]
+      # can we verify this is working with the console?
