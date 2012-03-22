@@ -7,6 +7,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div data-bind="flash.success"></div>
+<div data-bind="flash.error"></div>
 
 <%= yield %>
 

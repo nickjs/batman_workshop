@@ -27,7 +27,6 @@
 
 //= require_tree .
 // Run the Batman app
-$(document).ready(function(){
+$(function(){
   BatmanWorkshop.run();
 });
-

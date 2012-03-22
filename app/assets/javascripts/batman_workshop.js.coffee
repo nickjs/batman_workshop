@@ -1,7 +1,4 @@
-window.BatmanWorkshop = class BatmanWorkshop extends Batman.App
-
-  # @root 'controller#all'
-  # @route '/controller/:id', 'controller#show', resource: 'model', action: 'show'
+class window.BatmanWorkshop extends Batman.App
 
   @on 'run', ->
     console?.log "Running ...."
@@ -9,7 +6,7 @@ window.BatmanWorkshop = class BatmanWorkshop extends Batman.App
   @on 'ready', ->
     console?.log "BatmanWorkshop ready for use."
 
-  @flash: Batman()
+  @flash: new Batman.Object
   @flash.accessor
     get: (key) -> @[key]
     set: (key, value) ->
