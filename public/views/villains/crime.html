@@ -1,5 +1,9 @@
 <h4>
   <span data-bind="crime.name"></span>
   <a data-event-click="crime.destroy | withArguments ''" class="btn btn-warning destroy-crime">BATMAN'd!</a>
+
+  <div data-showif="crime.longitude" data-renderif="crime.longitude">
+    <div data-view="MapView" data-bind-latitude="crime.latitude" data-bind-longitude="crime.longitude"></div>
+  </div>
 </h4>
 <br />
