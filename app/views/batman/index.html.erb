@@ -2,7 +2,7 @@
   <div class="navbar-inner">
     <div class="container">
       <span class="brand" data-bind="message"></span>
-      <ul class="nav">
+      <ul class="nav" data-showif="Villain.all.length">
         <li data-addclass-active="currentURL | matches 'villains' | not"><a data-route="Crime | routeToAction 'new'">Report a Crime</a></li>
         <li data-addclass-active="currentURL | matches 'villains'"><a data-route="Villain | routeToAction 'index'">Villains</a></li>
       </ul>
