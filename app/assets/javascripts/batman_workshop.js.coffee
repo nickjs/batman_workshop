@@ -1,6 +1,7 @@
 class window.BatmanWorkshop extends Batman.App
 
   @resources 'villains'
+  @root 'crimes#new'
 
   @message: 'welcome to arkham asylum'
 
